@@ -1,0 +1,175 @@
+:root {
+  /* ## Colors
+
+### Primary */
+
+  --Soft_blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+
+  /* ### Neutral */
+
+  --Very_dark_blue_main: hsl(217, 54%, 11%);
+  --Very_dark_blue_card: #14253d;
+  --Very_dark_blue_line: hsl(215, 19%, 53%);
+  --White: hsl(0, 0%, 100%);
+  /* 
+### Primary */
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Very_dark_blue_main);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  background-color: var(--Very_dark_blue_card);
+  height: 38rem;
+  width: 22rem;
+  margin-top: 16vh;
+  border-radius: 1rem;
+  z-index: 1;
+  -webkit-box-shadow: 1px 3px 67px 18px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 3px 67px 18px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 3px 67px 18px rgba(0, 0, 0, 0.75);
+}
+
+picture {
+  border-radius: 0.5rem;
+  padding: 0 1.5rem 1.5rem;
+}
+
+#equilibrium:hover + #box-view {
+  cursor: pointer;
+  transform: scale(1);
+}
+
+#equilibrium {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+#box-view {
+  position: absolute;
+  top: 19vh;
+  height: 19rem;
+  width: 19rem;
+  border-radius: 1rem;
+  background-color: hsla(178, 100%, 50%, 0.534);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms;
+  transform: scale(0);
+}
+
+#box-view:hover {
+  transform: scale(1);
+  cursor: pointer;
+}
+
+#view {
+  height: 3rem;
+  width: 3rem;
+}
+
+h2 {
+  text-align: left;
+  padding: 0 1.5rem 1rem;
+  color: white;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  transition: all 600ms;
+}
+
+h2:hover,
+h3:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+
+#text {
+  color: var(--Very_dark_blue_line);
+  text-align: left;
+  padding: 0 1.5rem 1.5rem;
+  font-size: 1.2rem;
+}
+
+#price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+
+span {
+  color: var(--Soft_blue);
+}
+
+#ETH {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--Cyan);
+}
+
+#img-creator {
+  height: 2rem;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+#bar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.185);
+  margin: 1rem 2rem 0;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.5rem 1.5rem;
+}
+
+h3 {
+  font-size: 0.85rem;
+  font-weight: lighter;
+  color: white;
+  margin-left: 1rem;
+  transition: all 500ms;
+  letter-spacing: 1px;
+}
+
+.attribution {
+  margin-top: 10rem;
+  color: aliceblue;
+}
+
+@media (max-width: 600px) {
+  main {
+    margin: 2vh;
+  }
+  .attribution {
+    display: none;
+  }
+}
